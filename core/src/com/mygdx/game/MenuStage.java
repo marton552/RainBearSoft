@@ -53,22 +53,22 @@ public class MenuStage extends MyStage {
         });
 
         addActor(badlActor);
-        addActor(crossActor);
-        textButton.setPosition(200,200);
-        textButton.debug();
-        addActor(textButton);
-        textButton2.setPosition(200,300);
-        textButton2.debug();
-        addActor(textButton2);
-        addActor(new StarActor());
-        explosionActor = new ExplosionActor();
-        explosionActor.setPosition(0, getHeight() - explosionActor.getHeight());
-        addActor(explosionActor);
-        utkozesMyLabel = new MyLabel("");
-        utkozesMyLabel.setPosition(MyScreen.WORLD_WIDTH/2,MyScreen.WORLD_HEIGHT-25);
-        addActor(utkozesMyLabel);
+        //addActor(crossActor);
+        //textButton.setPosition(200,200);
+        //textButton.debug();
+        //addActor(textButton);
+        //textButton2.setPosition(200,300);
+        //textButton2.debug();
+        //addActor(textButton2);
+        //addActor(new StarActor());
+        //explosionActor = new ExplosionActor();
+        //explosionActor.setPosition(0, getHeight() - explosionActor.getHeight());
+        //addActor(explosionActor);
+        //utkozesMyLabel = new MyLabel("");
+        //utkozesMyLabel.setPosition(MyScreen.WORLD_WIDTH/2,MyScreen.WORLD_HEIGHT-25);
+        //addActor(utkozesMyLabel);
 
-        addActor(new CrossActor());
+        //addActor(new CrossActor());
         getActors().get(getActors().size-1).setPosition(-300, 100);
 
         OneSpriteAnimatedActor a = new OneSpriteAnimatedActor("walk.atlas"){
@@ -88,14 +88,6 @@ public class MenuStage extends MyStage {
     @Override
     public void act(float delta) {
         super.act(delta);
-        if (badlActor.overlaps(ShapeType.Rectangle, crossActor))
-        {
-            utkozesMyLabel.setText("Ütközés!");
-        }
-        else
-        {
-            utkozesMyLabel.setText("Nincs ütközés.");
-        }
     }
 
     @Override

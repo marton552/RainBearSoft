@@ -32,8 +32,6 @@ public class MenuStage extends MyStage {
 
     public void init()
     {
-        badlActor = new BadlActor();
-        crossActor = new CrossActor();
         textButton = new MyButton("Előre");
         textButton.addListener(new ClickListener(){
             @Override
@@ -43,44 +41,6 @@ public class MenuStage extends MyStage {
             }
         });
 
-        textButton2 = new MyButton("Űrlap");
-        textButton2.addListener(new ClickListener(){
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                super.clicked(event, x, y);
-                game.setScreen(new InputScreen(game));
-            }
-        });
-
-        addActor(badlActor);
-        //addActor(crossActor);
-        //textButton.setPosition(200,200);
-        //textButton.debug();
-        //addActor(textButton);
-        //textButton2.setPosition(200,300);
-        //textButton2.debug();
-        //addActor(textButton2);
-        //addActor(new StarActor());
-        //explosionActor = new ExplosionActor();
-        //explosionActor.setPosition(0, getHeight() - explosionActor.getHeight());
-        //addActor(explosionActor);
-        //utkozesMyLabel = new MyLabel("");
-        //utkozesMyLabel.setPosition(MyScreen.WORLD_WIDTH/2,MyScreen.WORLD_HEIGHT-25);
-        //addActor(utkozesMyLabel);
-
-        //addActor(new CrossActor());
-        getActors().get(getActors().size-1).setPosition(-300, 100);
-
-        OneSpriteAnimatedActor a = new OneSpriteAnimatedActor("walk.atlas"){
-            @Override
-            public void act(float delta) {
-                super.act(delta);
-                setX(getX()+delta*70);
-            }
-        };
-
-        a.setFps(5);
-        addActor(a);
 
     }
 

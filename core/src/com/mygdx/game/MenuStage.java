@@ -16,7 +16,8 @@ public class MenuStage extends MyStage {
     private CrossActor crossActor;
     private TextButton textButton, textButton2;
     private ExplosionActor explosionActor;
-    private MyLabel utkozesMyLabel;
+    private StarActor animation;
+    private MyLabel cim;
 
     public MenuStage(Game game) {
         super(game);
@@ -41,8 +42,15 @@ public class MenuStage extends MyStage {
             }
         });
 
-
-
+        cim = new MyLabel("Game");
+        cim.setFontScale(0.8f);
+        cim.setPosition(getWidth() / 2 - cim.getWidth() / 2, getHeight() - cim.getHeight());
+        animation = new StarActor();
+        animation.setFps(30);
+        animation.setSize(300, 300);
+        animation.setPosition(getWidth() / 2 - animation.getWidth() / 2, 0);
+        addActor(animation);
+        addActor(cim);
     }
 
 

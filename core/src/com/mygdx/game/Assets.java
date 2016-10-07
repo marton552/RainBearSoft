@@ -29,7 +29,7 @@ public class Assets {
 	public static final AssetDescriptor<TextureAtlas> EXPLOSION_TEXTUREATLAS
 			= new AssetDescriptor<TextureAtlas>("explosion.atlas", TextureAtlas.class);
 	public static final AssetDescriptor<TextureAtlas> STAR_TEXTUREATLAS
-			= new AssetDescriptor<TextureAtlas>("star.atlas", TextureAtlas.class);
+			= new AssetDescriptor<TextureAtlas>("mosoly.atlas", TextureAtlas.class);
 
 	/*
     public static final AssetDescriptor<Music> MUSIC

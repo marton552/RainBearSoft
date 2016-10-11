@@ -8,6 +8,8 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
+import java.util.Random;
+
 /**
  * Created by tuskeb on 2016. 09. 30..
  */
@@ -51,6 +53,21 @@ public class MenuStage extends MyStage {
         animation.setPosition(getWidth() / 2 - animation.getWidth() / 2, 0);
         addActor(animation);
         addActor(cim);
+
+        int[] sorozatszamok = {};
+        int[] sorozatmuveletek = {};
+        Random random = new Random();
+        int utolsoszam = 0;
+        int[] kepletszamok = {random.nextInt(8) + 1, random.nextInt(8) + 1, random.nextInt(8) + 1};
+        int[] muveletek = {random.nextInt(2) + 1, random.nextInt(2) + 1, random.nextInt(2) + 1};
+
+        for(int i = 0; i < 4; i++){
+
+        }
+
+        for(int i = 0; i < sorozat.length; i++){
+            System.out.print(sorozat[i]+", ");
+        }
     }
 
 

@@ -15,19 +15,19 @@ abstract public class MyStage extends Stage {
     public MyStage(Game game) {
         this.game = game;
         init();
-    }
+    };
 
     public MyStage(Viewport viewport, Game game) {
         super(viewport);
         this.game = game;
         init();
-    }
+    };
 
     public MyStage(Viewport viewport, Batch batch, Game game) {
         super(viewport, batch);
         this.game = game;
         init();
-    }
+    };
 
     abstract protected void init();
 

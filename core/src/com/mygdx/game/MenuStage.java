@@ -33,10 +33,9 @@ public class MenuStage extends MyStage {
         super(viewport, game);
     }
 
-    public void init()
-    {
+    public void init() {
         textButton = new MyButton("Előre");
-        textButton.addListener(new ClickListener(){
+        textButton.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 super.clicked(event, x, y);
@@ -53,7 +52,7 @@ public class MenuStage extends MyStage {
         animation.setPosition(getWidth() / 2 - animation.getWidth() / 2, 0);
         addActor(animation);
         addActor(cim);
-
+    }
 
     @Override
     public void act(float delta) {
@@ -63,6 +62,5 @@ public class MenuStage extends MyStage {
     @Override
     public void dispose() {
         super.dispose();
-
     }
 }

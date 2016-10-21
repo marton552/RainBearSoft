@@ -16,16 +16,31 @@ import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.ScalingViewport;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
+//import com.sun.xml.internal.bind.annotation.OverrideAnnotationOf;
 
 import javafx.scene.Camera;
 
 public class LoadingScreen extends MyScreen {
 
-
+	MyStage stage;
     public LoadingScreen(Game game) {
 		super(game);
         setBackGroundColor(0f, 0.5f, 0f);
-    }
+		stage = new MyStage(viewport, spriteBatch, game) {
+			@Override
+			protected void init() {
+				addActor(new OneSpriteAnimatedActor("loading.atlas"){
+					@Override
+					protected void init(){
+						super.init();
+						setSize(viewport.getWorldWidth(), viewport.getMinWorldHeight());
+					}
+				});
+			}
+		};
+
+
+	}
 
     @Override
 	public void show() {
@@ -36,13 +51,12 @@ public class LoadingScreen extends MyScreen {
 	@Override
 	public void render(float delta) {
 		super.render(delta);
-		if (Assets.manager.update()) {
-            Assets.afterLoaded();
-            game.setScreen(new MenuScreen(game));
-		}
-		spriteBatch.begin();
-		Globals.FONT_HOBO_STD.draw(spriteBatch,"Betöltés: " + Assets.manager.getLoadedAssets() + "/" + (Assets.manager.getQueuedAssets()+Assets.manager.getLoadedAssets()) + " (" + ((int)(Assets.manager.getProgress()*100f)) + "%)",0,50);
-		spriteBatch.end();
+		//if (Assets.manager.update()) {
+          //  Assets.afterLoaded();
+            //game.setScreen(new MenuScreen(game));
+		//}
+		stage.act(delta);
+		stage.draw();
 	}
 
 	@Override

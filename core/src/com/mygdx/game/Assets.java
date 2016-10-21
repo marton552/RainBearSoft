@@ -30,6 +30,8 @@ public class Assets {
 			= new AssetDescriptor<TextureAtlas>("explosion.atlas", TextureAtlas.class);
 	public static final AssetDescriptor<TextureAtlas> STAR_TEXTUREATLAS
 			= new AssetDescriptor<TextureAtlas>("mosoly.atlas", TextureAtlas.class);
+	public static final AssetDescriptor<TextureAtlas> LOADING_TEXTUREATLAS
+			= new AssetDescriptor<TextureAtlas>("loading.atlas", TextureAtlas.class);
 
 	/*
     public static final AssetDescriptor<Music> MUSIC
@@ -53,6 +55,7 @@ public class Assets {
 
 		manager.load(EXPLOSION_TEXTUREATLAS);
 		manager.load(STAR_TEXTUREATLAS);
+		manager.load(LOADING_TEXTUREATLAS);
 
 		manager.load(STAR_SOUND);
 		/*

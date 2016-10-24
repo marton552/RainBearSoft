@@ -19,6 +19,7 @@ public class MenuScreen extends MyScreen {
         menuStage  = new MenuStage(viewport, spriteBatch, game);
         Gdx.input.setInputProcessor(menuStage);
         setBackGroundColor(1, 1, 1);
+
     }
 
     @Override

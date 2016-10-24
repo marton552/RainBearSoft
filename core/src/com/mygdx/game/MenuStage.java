@@ -1,6 +1,7 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
@@ -14,12 +15,9 @@ import java.util.Random;
  * Created by tuskeb on 2016. 09. 30..
  */
 public class MenuStage extends MyStage {
-    private BadlActor badlActor;
-    private CrossActor crossActor;
-    private TextButton textButton, textButton2;
-    private ExplosionActor explosionActor;
-    private StarActor animation;
     private MyLabel cim;
+    private MyButton playButton;
+    private MyButton aboutButton;
 
     public MenuStage(Game game) {
         super(game);
@@ -34,24 +32,39 @@ public class MenuStage extends MyStage {
     }
 
     public void init() {
-        textButton = new MyButton("Előre");
-        textButton.addListener(new ClickListener() {
+        addActor(new OneSpriteStaticActor(Assets.manager.get(Assets.TABLE_TEXTURE)){
+            @Override
+            protected void init() {
+                super.init();
+                setSize(getViewport().getWorldWidth(), getViewport().getWorldHeight());
+            }
+        });
+
+        cim = new MyLabel("Game");
+        cim.setPosition(getViewport().getWorldWidth() / 2 - cim.getWidth() / 2, getViewport().getWorldHeight() - cim.getHeight() - 40);
+        addActor(cim);
+
+        playButton = new MyButton("Játék");
+        playButton.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 super.clicked(event, x, y);
                 game.setScreen(new OtherScreen(game));
             }
         });
+        playButton.setPosition(getViewport().getWorldWidth() / 2 - playButton.getWidth() / 2, cim.getY() - playButton.getHeight() - 60);
+        addActor(playButton);
 
-        cim = new MyLabel("Game");
-        cim.setFontScale(0.8f);
-        cim.setPosition(getWidth() / 2 - cim.getWidth() / 2, getHeight() - cim.getHeight());
-        animation = new StarActor();
-        animation.setFps(30);
-        animation.setSize(300, 300);
-        animation.setPosition(getWidth() / 2 - animation.getWidth() / 2, 0);
-        addActor(animation);
-        addActor(cim);
+        aboutButton = new MyButton("Segítség");
+        aboutButton.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                super.clicked(event, x, y);
+                game.setScreen(new OtherScreen(game));
+            }
+        });
+        aboutButton.setPosition(getViewport().getWorldWidth() / 2 - aboutButton.getWidth() / 2, playButton.getY() - aboutButton.getHeight() - 30);
+        addActor(aboutButton);
     }
 
     @Override

@@ -20,11 +20,13 @@ public class Assets {
 
 	public static final AssetDescriptor<Texture> BADLOGIC_TEXTURE
 			= new AssetDescriptor<Texture>("badlogic.jpg", Texture.class);
+	public static final AssetDescriptor<Texture> TABLE_TEXTURE
+			= new AssetDescriptor<Texture>("table.jpg", Texture.class);
+
 	public static final AssetDescriptor<Texture> CURSOR_TEXTURE
 			= new AssetDescriptor<Texture>("cursor.png", Texture.class);
 	public static final AssetDescriptor<Texture> TEXTBOX_TEXTURE
 			= new AssetDescriptor<Texture>("textbox.png", Texture.class);
-
 
 	public static final AssetDescriptor<TextureAtlas> EXPLOSION_TEXTUREATLAS
 			= new AssetDescriptor<TextureAtlas>("explosion.atlas", TextureAtlas.class);
@@ -32,6 +34,8 @@ public class Assets {
 			= new AssetDescriptor<TextureAtlas>("mosoly.atlas", TextureAtlas.class);
 	public static final AssetDescriptor<TextureAtlas> LOADING_TEXTUREATLAS
 			= new AssetDescriptor<TextureAtlas>("loading.atlas", TextureAtlas.class);
+	public static final AssetDescriptor<TextureAtlas> ELTALALTAD_TEXTUREATLAS
+			= new AssetDescriptor<TextureAtlas>("eltalaltad.atlas", TextureAtlas.class);
 
 	/*
     public static final AssetDescriptor<Music> MUSIC
@@ -50,14 +54,17 @@ public class Assets {
 	public static void load() {
 
 		manager.load(BADLOGIC_TEXTURE);
+		manager.load(TABLE_TEXTURE);
 		manager.load(TEXTBOX_TEXTURE);
 		manager.load(CURSOR_TEXTURE);
 
 		manager.load(EXPLOSION_TEXTUREATLAS);
 		manager.load(STAR_TEXTUREATLAS);
 		manager.load(LOADING_TEXTUREATLAS);
+		manager.load(ELTALALTAD_TEXTUREATLAS);
 
 		manager.load(STAR_SOUND);
+
 		/*
         manager.load(MUSIC);
         */

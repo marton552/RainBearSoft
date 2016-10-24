@@ -36,15 +36,15 @@ public class InputScreen extends MyScreen {
                 table.setWidth(640);
                 table.setHeight(480);
                 table.add(new MyButton(random())).width(100).align(Align.center);
-                table.add(new MyLabel("+")).width(100).align(Align.center);
+                //table.add(new MyLabel("+")).width(100).align(Align.center);
                 table.add(new MyButton(random())).width(100).align(Align.center);
-                table.add(new MyLabel("=")).width(100).align(Align.center);
+                //table.add(new MyLabel("=")).width(100).align(Align.center);
                 table.add(new MyTextField("?"));
                 table.row();
                 table.add(new MyButton(random())).width(100).align(Align.center);
-                table.add(new MyLabel("*")).width(100).align(Align.center);
+                //table.add(new MyLabel("*")).width(100).align(Align.center);
                 table.add(new MyButton(random())).width(100).align(Align.center);
-                table.add(new MyLabel("=")).width(100).align(Align.center);
+                //table.add(new MyLabel("=")).width(100).align(Align.center);
                 table.add(new MyTextField("?"));
                 table.row();
                 table.add(new MyButton("Vissza"){

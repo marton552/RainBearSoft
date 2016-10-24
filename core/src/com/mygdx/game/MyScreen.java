@@ -19,7 +19,7 @@ import com.badlogic.gdx.utils.viewport.Viewport;
  * Created by tuskeb on 2016. 09. 30..
  */
 abstract public class MyScreen implements Screen {
-    public final static float WORLD_WIDTH = 640, WORLD_HEIGHT = 480;
+    public final static float WORLD_WIDTH = 640, WORLD_HEIGHT = 480; //640, 480 | 1280, 720
     protected SpriteBatch spriteBatch = new SpriteBatch();
     protected OrthographicCamera camera = new OrthographicCamera(WORLD_WIDTH, WORLD_HEIGHT);
     protected ExtendViewport viewport = new ExtendViewport(WORLD_WIDTH, WORLD_HEIGHT, camera);
@@ -29,10 +29,9 @@ abstract public class MyScreen implements Screen {
     protected Game game;
 
 
-
     public MyScreen(Game game) {
         this.game = game;
-        camera.translate(WORLD_WIDTH/2, WORLD_HEIGHT/2);
+        camera.translate(WORLD_WIDTH, WORLD_HEIGHT/2);
         camera.update();
     }
 
@@ -61,8 +60,8 @@ abstract public class MyScreen implements Screen {
     @Override
     public void resize(int width, int height) {
         viewport.update(width, height, true);
-        camera.translate(((viewport.getWorldWidth() - WORLD_WIDTH) / 2) < 0 ? 0 : -((viewport.getWorldWidth() - WORLD_WIDTH) / 2),
-                ((viewport.getWorldHeight() - WORLD_HEIGHT) / 2) < 0 ? 0 : -((viewport.getWorldHeight() - WORLD_HEIGHT) / 2));
+        //camera.translate(((viewport.getWorldWidth() - WORLD_WIDTH) / 2) < 0 ? 0 : -((viewport.getWorldWidth() - WORLD_WIDTH) / 2),
+        //        ((viewport.getWorldHeight() - WORLD_HEIGHT) / 2) < 0 ? 0 : -((viewport.getWorldHeight() - WORLD_HEIGHT) / 2));
         camera.update();
     }
 

@@ -16,16 +16,17 @@ public class MyButton extends TextButton{
         textButtonStyle = new TextButton.TextButtonStyle();
         textButtonStyle.font = Globals.FONT_HOBO_STD;
 
-        Pixmap p = new Pixmap(1,1, Pixmap.Format.RGB888);
-        p.setColor(0.1f,0.2f,0.2f, 0.5f);
+
+        Pixmap p = new Pixmap(300, 10, Pixmap.Format.RGBA8888);
+        p.setColor(1f, 1f, 1f, 0.3f);
         p.fill();
         textButtonStyle.up = new TextureRegionDrawable(new TextureRegion(new Texture(p)));
 
-        p.setColor(0.3f,0.5f,0.8f, 0.5f);
+        p.setColor(1f, 1f, 1f, 0.4f);
         p.fill();
         textButtonStyle.over = new TextureRegionDrawable(new TextureRegion(new Texture(p)));
 
-        p.setColor(1f,0.5f,0.8f, 1f);
+        p.setColor(1f, 1f, 1f, 0.5f);
         p.fill();
         textButtonStyle.down = new TextureRegionDrawable(new TextureRegion(new Texture(p)));
 

@@ -1,7 +1,9 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
@@ -15,6 +17,7 @@ import java.util.Random;
  * Created by tuskeb on 2016. 09. 30..
  */
 public class MenuStage extends MyStage {
+    public Music music = Assets.manager.get(Assets.MUSIC);
     private MyLabel cim;
     private MyButton playButton;
     private MyButton aboutButton;
@@ -32,6 +35,7 @@ public class MenuStage extends MyStage {
     }
 
     public void init() {
+
         addActor(new OneSpriteStaticActor(Assets.manager.get(Assets.MAINAMENU_TEXTURE)){
             @Override
             protected void init() {
@@ -76,6 +80,10 @@ public class MenuStage extends MyStage {
     @Override
     public void act(float delta) {
         super.act(delta);
+        if (!music.isPlaying())
+        {
+            music.play();
+        }
     }
 
     @Override

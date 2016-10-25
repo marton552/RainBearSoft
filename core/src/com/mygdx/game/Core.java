@@ -3,10 +3,6 @@ package com.mygdx.game;
 import java.util.ArrayList;
 import java.util.Random;
 
-/**
- * Created by Horváth Martin on 2016. 10. 15..
- */
-
 public class Core {
     private ArrayList<Integer> muveletek = new ArrayList<Integer>();
     private ArrayList<Integer> muveletszamok = new ArrayList<Integer>();

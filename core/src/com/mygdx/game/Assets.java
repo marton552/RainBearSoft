@@ -55,13 +55,13 @@ public class Assets {
 	public static final AssetDescriptor<TextureAtlas> ELTALALTAD_TEXTUREATLAS
 			= new AssetDescriptor<TextureAtlas>("eltalaltad.atlas", TextureAtlas.class);
 
-	/*
+
     public static final AssetDescriptor<Music> MUSIC
-            = new AssetDescriptor<Music>("***.mp3", Music.class);
-*/
+            = new AssetDescriptor<Music>("menu.wav", Music.class);
+/*
     public static final AssetDescriptor<Sound> STAR_SOUND
             = new AssetDescriptor<Sound>("star.wav", Sound.class);
-
+*/
 
 
     public static void prepare() {
@@ -87,7 +87,7 @@ public class Assets {
 		manager.load(LOADING_TEXTUREATLAS);
 		manager.load(ELTALALTAD_TEXTUREATLAS);
 
-		manager.load(STAR_SOUND);
+		manager.load(MUSIC);
 
 		manager.load(ALEGREYAREGULAR_FONT);
 

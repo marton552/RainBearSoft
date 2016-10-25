@@ -41,6 +41,10 @@ public class Assets {
 	public static final AssetDescriptor<Texture> MAINAMENU_TEXTURE
 			= new AssetDescriptor<Texture>("Menü (1).png", Texture.class);
 
+	public static final AssetDescriptor<Texture> GAME_TEXTURE
+			= new AssetDescriptor<Texture>("Menü2.png", Texture.class);
+
+
 	public static final AssetDescriptor<Texture> CURSOR_TEXTURE
 			= new AssetDescriptor<Texture>("cursor.png", Texture.class);
 	public static final AssetDescriptor<Texture> TEXTBOX_TEXTURE
@@ -79,6 +83,9 @@ public class Assets {
 
 		manager.load(BADLOGIC_TEXTURE);
 		manager.load(MAINAMENU_TEXTURE);
+
+		manager.load(GAME_TEXTURE);
+
 		manager.load(TEXTBOX_TEXTURE);
 		manager.load(CURSOR_TEXTURE);
 

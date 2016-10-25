@@ -43,7 +43,6 @@ public class MenuStage extends MyStage {
                 setSize(getViewport().getWorldWidth(), getViewport().getWorldHeight());
             }
         });
-
         cim = new MyLabel("Game");
         cim.setPosition(getViewport().getWorldWidth() / 2 - cim.getWidth() / 2, getViewport().getWorldHeight() - cim.getHeight() - 40);
         addActor(cim);

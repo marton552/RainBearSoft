@@ -2,6 +2,7 @@ package com.mygdx.game;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.g2d.Batch;
+import com.badlogic.gdx.graphics.g3d.particles.ResourceData;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
@@ -26,6 +27,15 @@ public class OtherStage extends MyStage {
     }
 
     protected void init() {
+
+        addActor(new OneSpriteStaticActor(Assets.manager.get(Assets.GAME_TEXTURE)){
+            @Override
+            protected void init() {
+                super.init();
+                setSize(getViewport().getWorldWidth(), getViewport().getWorldHeight());
+            }
+        });
+
         textButton = new MyButton("Vissza");
         textButton.addListener(new ClickListener(){
             @Override

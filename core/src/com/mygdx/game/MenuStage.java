@@ -53,6 +53,9 @@ public class MenuStage extends MyStage {
             public void clicked(InputEvent event, float x, float y) {
                 super.clicked(event, x, y);
                 game.setScreen(new OtherScreen(game));
+                for (float i = music.getVolume(); music.getVolume() > 0; i = i - 0.01f){
+                    music.setVolume(i);
+                }
             }
         });
 
@@ -69,9 +72,6 @@ public class MenuStage extends MyStage {
         });
         aboutButton.setPosition(getViewport().getWorldWidth() / 2 - aboutButton.getWidth() / 2, playButton.getY() - aboutButton.getHeight() - 30);
         addActor(aboutButton);
-
-        Core c = new Core(3, 6);
-        System.out.println(c.getSzamok());
 
     }
 

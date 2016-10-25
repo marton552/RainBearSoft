@@ -70,6 +70,9 @@ public class Assets {
 
     public static final AssetDescriptor<Music> MUSIC
             = new AssetDescriptor<Music>("menu.wav", Music.class);
+	public static final AssetDescriptor<Music> JATEK
+            = new AssetDescriptor<Music>("jatek.wav", Music.class);
+
 /*
     public static final AssetDescriptor<Sound> STAR_SOUND
             = new AssetDescriptor<Sound>("star.wav", Sound.class);

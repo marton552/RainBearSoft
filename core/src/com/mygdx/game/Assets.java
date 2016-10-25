@@ -3,11 +3,18 @@ package com.mygdx.game;
 
 import com.badlogic.gdx.assets.AssetDescriptor;
 import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.assets.loaders.FileHandleResolver;
+import com.badlogic.gdx.assets.loaders.resolvers.InternalFileHandleResolver;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.audio.Sound;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
+import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGeneratorLoader;
+import com.badlogic.gdx.graphics.g2d.freetype.FreetypeFontLoader;
 
 public class Assets {
 	// https://github.com/libgdx/libgdx/wiki/Managing-your-assets
@@ -17,6 +24,17 @@ public class Assets {
 
 	public static AssetManager manager;
 
+
+	//https://github.com/libgdx/libgdx/wiki/Managing-your-assets
+	static final FreetypeFontLoader.FreeTypeFontLoaderParameter fontParameter = new FreetypeFontLoader.FreeTypeFontLoaderParameter();
+	static {
+		fontParameter.fontFileName = "alegreyaregular.otf";
+		fontParameter.fontParameters.size = 35;
+		fontParameter.fontParameters.characters = Globals.CHARS;
+	}
+
+	public static final AssetDescriptor<BitmapFont> ALEGREYAREGULAR_FONT
+			= new AssetDescriptor<BitmapFont>("alegreyaregular.otf", BitmapFont.class, fontParameter);
 
 	public static final AssetDescriptor<Texture> BADLOGIC_TEXTURE
 			= new AssetDescriptor<Texture>("badlogic.jpg", Texture.class);
@@ -53,6 +71,12 @@ public class Assets {
 
 	public static void load() {
 
+		//https://github.com/libgdx/libgdx/wiki/Managing-your-assets
+		FileHandleResolver resolver = new InternalFileHandleResolver();
+		manager.setLoader(FreeTypeFontGenerator.class, new FreeTypeFontGeneratorLoader(resolver));
+		manager.setLoader(BitmapFont.class, ".ttf", new FreetypeFontLoader(resolver));
+		manager.setLoader(BitmapFont.class, ".otf", new FreetypeFontLoader(resolver));
+
 		manager.load(BADLOGIC_TEXTURE);
 		manager.load(TABLE_TEXTURE);
 		manager.load(TEXTBOX_TEXTURE);
@@ -64,6 +88,8 @@ public class Assets {
 		manager.load(ELTALALTAD_TEXTUREATLAS);
 
 		manager.load(STAR_SOUND);
+
+		manager.load(ALEGREYAREGULAR_FONT);
 
 		/*
         manager.load(MUSIC);

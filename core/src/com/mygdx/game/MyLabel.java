@@ -25,7 +25,7 @@ public class MyLabel extends Label {
     static
     {
         style = new com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle();
-        style.font = Globals.FONT_HOBO_STD;
+        style.font = Assets.manager.get(Assets.ALEGREYAREGULAR_FONT);
         style.fontColor = Color.WHITE;
         Pixmap p = new Pixmap(1,1, Pixmap.Format.RGB888);
         p.setColor(1f, 1f, 1f, 1f);

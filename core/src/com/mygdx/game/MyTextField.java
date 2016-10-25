@@ -22,7 +22,7 @@ public class MyTextField extends TextField{
         style.background = new TextureRegionDrawable(new TextureRegion(new Texture("textbox.png")));
         style.background.setLeftWidth(style.background.getLeftWidth()+20);
         style.background.setRightWidth(style.background.getRightWidth()+20);
-        style.font = Globals.FONT_HOBO_STD;
+        style.font = Assets.manager.get(Assets.ALEGREYAREGULAR_FONT);
         style.cursor = new TextureRegionDrawable(new TextureRegion(new Texture("cursor.png")));
         style.cursor.setMinWidth(50);
         style.fontColor = Color.BLACK;

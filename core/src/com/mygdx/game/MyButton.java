@@ -14,7 +14,7 @@ public class MyButton extends TextButton{
     static
     {
         textButtonStyle = new TextButton.TextButtonStyle();
-        textButtonStyle.font = Globals.FONT_HOBO_STD;
+        textButtonStyle.font = Assets.manager.get(Assets.ALEGREYAREGULAR_FONT);
 
 
         Pixmap p = new Pixmap(300, 10, Pixmap.Format.RGBA8888);

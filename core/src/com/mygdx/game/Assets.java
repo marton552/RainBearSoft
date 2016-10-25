@@ -27,14 +27,22 @@ public class Assets {
 
 	//https://github.com/libgdx/libgdx/wiki/Managing-your-assets
 	static final FreetypeFontLoader.FreeTypeFontLoaderParameter fontParameter = new FreetypeFontLoader.FreeTypeFontLoaderParameter();
+	static final FreetypeFontLoader.FreeTypeFontLoaderParameter cimParameter = new FreetypeFontLoader.FreeTypeFontLoaderParameter();
 	static {
 		fontParameter.fontFileName = "alegreyaregular.otf";
 		fontParameter.fontParameters.size = 35;
 		fontParameter.fontParameters.characters = Globals.CHARS;
+
+		cimParameter.fontFileName = "neuropol.ttf";
+		cimParameter.fontParameters.size = 35;
+		cimParameter.fontParameters.characters = Globals.CHARS;
 	}
 
 	public static final AssetDescriptor<BitmapFont> ALEGREYAREGULAR_FONT
 			= new AssetDescriptor<BitmapFont>("alegreyaregular.otf", BitmapFont.class, fontParameter);
+
+	public static final AssetDescriptor<BitmapFont> NEUROPOL_FONT
+			= new AssetDescriptor<BitmapFont>("neuropol.ttf", BitmapFont.class, cimParameter);
 
 	public static final AssetDescriptor<Texture> BADLOGIC_TEXTURE
 			= new AssetDescriptor<Texture>("badlogic.jpg", Texture.class);
@@ -97,6 +105,7 @@ public class Assets {
 		manager.load(MUSIC);
 
 		manager.load(ALEGREYAREGULAR_FONT);
+		manager.load(NEUROPOL_FONT);
 
 		/*
         manager.load(MUSIC);

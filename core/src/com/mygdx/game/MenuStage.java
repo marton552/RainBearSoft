@@ -32,7 +32,7 @@ public class MenuStage extends MyStage {
     }
 
     public void init() {
-        addActor(new OneSpriteStaticActor(Assets.manager.get(Assets.TABLE_TEXTURE)){
+        addActor(new OneSpriteStaticActor(Assets.manager.get(Assets.MAINAMENU_TEXTURE)){
             @Override
             protected void init() {
                 super.init();
@@ -52,6 +52,7 @@ public class MenuStage extends MyStage {
                 game.setScreen(new OtherScreen(game));
             }
         });
+
         playButton.setPosition(getViewport().getWorldWidth() / 2 - playButton.getWidth() / 2, cim.getY() - playButton.getHeight() - 60);
         addActor(playButton);
 
@@ -65,9 +66,11 @@ public class MenuStage extends MyStage {
         });
         aboutButton.setPosition(getViewport().getWorldWidth() / 2 - aboutButton.getWidth() / 2, playButton.getY() - aboutButton.getHeight() - 30);
         addActor(aboutButton);
-    }
 
-    Core c = new Core(3, 6);
+        Core c = new Core(3, 6);
+        System.out.println(c.getSzamok());
+
+    }
 
 
     @Override

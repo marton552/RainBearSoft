@@ -38,8 +38,8 @@ public class Assets {
 
 	public static final AssetDescriptor<Texture> BADLOGIC_TEXTURE
 			= new AssetDescriptor<Texture>("badlogic.jpg", Texture.class);
-	public static final AssetDescriptor<Texture> TABLE_TEXTURE
-			= new AssetDescriptor<Texture>("badlogic.jpg", Texture.class);
+	public static final AssetDescriptor<Texture> MAINAMENU_TEXTURE
+			= new AssetDescriptor<Texture>("Menü (1).png", Texture.class);
 
 	public static final AssetDescriptor<Texture> CURSOR_TEXTURE
 			= new AssetDescriptor<Texture>("cursor.png", Texture.class);
@@ -78,7 +78,7 @@ public class Assets {
 		manager.setLoader(BitmapFont.class, ".otf", new FreetypeFontLoader(resolver));
 
 		manager.load(BADLOGIC_TEXTURE);
-		manager.load(TABLE_TEXTURE);
+		manager.load(MAINAMENU_TEXTURE);
 		manager.load(TEXTBOX_TEXTURE);
 		manager.load(CURSOR_TEXTURE);
 

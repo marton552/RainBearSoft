@@ -28,7 +28,7 @@ public class LoadingScreen extends MyScreen {
 		stage = new MyStage(viewport, spriteBatch, game) {
 			@Override
 			protected void init() {
-				addActor(new OneSpriteStaticActor("badlogic.jpg"){
+				addActor(new OneSpriteAnimatedActor("loading.atlas"){
 					@Override
 					protected void init(){
 						super.init();

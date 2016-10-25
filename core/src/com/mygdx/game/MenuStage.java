@@ -69,6 +69,7 @@ public class MenuStage extends MyStage {
 
         Core c = new Core(3, 6);
         System.out.println(c.getSzamok());
+
     }
 
 

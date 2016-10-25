@@ -67,6 +67,9 @@ public class MenuStage extends MyStage {
         addActor(aboutButton);
     }
 
+    Core c = new Core(3, 6);
+
+
     @Override
     public void act(float delta) {
         super.act(delta);

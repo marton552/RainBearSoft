@@ -22,11 +22,10 @@ public class MyLabel extends Label {
     float elapsedtime =0;
     public static com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle style;
     private ShapeRenderer sr;
-    private Matrix4 camera;
     static
     {
         style = new com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle();
-        style.font = Globals.CHALK_FONT;
+        style.font = Globals.FONT_HOBO_STD;
         style.fontColor = Color.WHITE;
         Pixmap p = new Pixmap(1,1, Pixmap.Format.RGB888);
         p.setColor(1f, 1f, 1f, 1f);

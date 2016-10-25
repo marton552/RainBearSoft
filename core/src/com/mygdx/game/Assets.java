@@ -21,7 +21,7 @@ public class Assets {
 	public static final AssetDescriptor<Texture> BADLOGIC_TEXTURE
 			= new AssetDescriptor<Texture>("badlogic.jpg", Texture.class);
 	public static final AssetDescriptor<Texture> TABLE_TEXTURE
-			= new AssetDescriptor<Texture>("table.jpg", Texture.class);
+			= new AssetDescriptor<Texture>("badlogic.jpg", Texture.class);
 
 	public static final AssetDescriptor<Texture> CURSOR_TEXTURE
 			= new AssetDescriptor<Texture>("cursor.png", Texture.class);

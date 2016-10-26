@@ -95,6 +95,9 @@ public class Core {
                 elso = muveletszamok.get(i);
                 masodik = muveletszamok.get(i + 1);
                 muveletszamok.remove(i + 1);
+                /*
+                HA A SZÁM 2 AKKOR SZOROZ IS ÉS KIVON IS????????????????????
+                */
                 if (muveletek.get(i) == 0) { //összeadás
                     muveletszamok.set(i, elso + masodik);
 
@@ -103,7 +106,7 @@ public class Core {
                 }
                 muveletek.remove(i);
                 i--;
-
+            
                 //System.out.println(muveletek + " - összeadás/kivonás");
                 //System.out.println(muveletszamok);
             }

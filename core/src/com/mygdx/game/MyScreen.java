@@ -72,7 +72,9 @@ abstract public class MyScreen implements Screen {
 
     @Override
     public void show() {
-
+        MyLabel.refresh();
+        MyButton.refresh();
+        MyTextField.refresh();
     }
 
     public Game getGame() {

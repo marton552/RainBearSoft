@@ -15,8 +15,12 @@ import com.badlogic.gdx.utils.Align;
  */
 public class MyTextField extends TextField{
     static TextFieldStyle style;
+    static{
+        refresh();
+    }
 
-    static
+
+    public static void refresh()
     {
         style = new TextFieldStyle();
         style.background = new TextureRegionDrawable(new TextureRegion(new Texture("textbox.png")));

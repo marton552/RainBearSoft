@@ -38,17 +38,6 @@ public class Core {
             }
         }
         for(int j = 0; j < 5; j++) {
-/*            System.out.println("==");
-            System.out.println(mem);
-            System.out.println(memsz);
-            System.out.println(muveletek);
-            System.out.println(muveletszamok);
-            System.out.println("==");
-            System.out.println("==");
-            System.out.println(mem);
-            System.out.println(memsz);
-            System.out.println(muveletek);
-            System.out.println(muveletszamok);*/
             szamolas();
         }
 
@@ -80,13 +69,8 @@ public class Core {
                     masodik = muveletszamok.get(i + 1);
                     muveletszamok.remove(i + 1);
                     muveletek.remove(i);
-
                     muveletszamok.set(i, elso * masodik);
-
                     i--;
-
-                    //System.out.println(muveletek + " - szoroztam");
-                    //System.out.println(muveletszamok);
                 }
             }
 
@@ -95,9 +79,6 @@ public class Core {
                 elso = muveletszamok.get(i);
                 masodik = muveletszamok.get(i + 1);
                 muveletszamok.remove(i + 1);
-                /*
-                HA A SZÁM 2 AKKOR SZOROZ IS ÉS KIVON IS????????????????????
-                */
                 if (muveletek.get(i) == 0) { //összeadás
                     muveletszamok.set(i, elso + masodik);
 
@@ -106,9 +87,6 @@ public class Core {
                 }
                 muveletek.remove(i);
                 i--;
-            
-                //System.out.println(muveletek + " - összeadás/kivonás");
-                //System.out.println(muveletszamok);
             }
 
             utolsoszam = muveletszamok.get(0);

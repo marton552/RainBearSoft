@@ -13,9 +13,6 @@ import com.badlogic.gdx.utils.viewport.Viewport;
 
 import java.util.Random;
 
-/**
- * Created by tuskeb on 2016. 09. 30..
- */
 public class MenuStage extends MyStage {
     public Music music = Assets.manager.get(Assets.MUSIC);
     private MyLabel cim;

@@ -28,26 +28,42 @@ public class Assets {
 	//https://github.com/libgdx/libgdx/wiki/Managing-your-assets
 	static final FreetypeFontLoader.FreeTypeFontLoaderParameter fontParameter = new FreetypeFontLoader.FreeTypeFontLoaderParameter();
 	static final FreetypeFontLoader.FreeTypeFontLoaderParameter cimParameter = new FreetypeFontLoader.FreeTypeFontLoaderParameter();
+	static final FreetypeFontLoader.FreeTypeFontLoaderParameter pencilParameter = new FreetypeFontLoader.FreeTypeFontLoaderParameter();
 	static {
 		fontParameter.fontFileName = "alegreyaregular.otf";
 		fontParameter.fontParameters.size = 35;
 		fontParameter.fontParameters.characters = Globals.CHARS;
 
-		cimParameter.fontFileName = "neuropol.ttf";
-		cimParameter.fontParameters.size = 35;
+		cimParameter.fontFileName = "chalk.otf";
+		cimParameter.fontParameters.size = 75;
 		cimParameter.fontParameters.characters = Globals.CHARS;
+
+		pencilParameter.fontFileName = "pencil.ttf";
+		pencilParameter.fontParameters.size = 45;
+		pencilParameter.fontParameters.characters = Globals.CHARS;
+
+
 	}
 
 	public static final AssetDescriptor<BitmapFont> ALEGREYAREGULAR_FONT
 			= new AssetDescriptor<BitmapFont>("alegreyaregular.otf", BitmapFont.class, fontParameter);
 
-	public static final AssetDescriptor<BitmapFont> NEUROPOL_FONT
-			= new AssetDescriptor<BitmapFont>("neuropol.ttf", BitmapFont.class, cimParameter);
+	public static final AssetDescriptor<BitmapFont> CHALK_FONT
+			= new AssetDescriptor<BitmapFont>("chalk.otf", BitmapFont.class, cimParameter);
+	public static final AssetDescriptor<BitmapFont> PENCIL_FONT
+			= new AssetDescriptor<BitmapFont>("pencil.ttf", BitmapFont.class, pencilParameter);
 
 	public static final AssetDescriptor<Texture> BADLOGIC_TEXTURE
 			= new AssetDescriptor<Texture>("badlogic.jpg", Texture.class);
 	public static final AssetDescriptor<Texture> MAINAMENU_TEXTURE
-			= new AssetDescriptor<Texture>("Menü (1).png", Texture.class);
+			= new AssetDescriptor<Texture>("table.jpg", Texture.class);
+
+	public static final AssetDescriptor<Texture> TABLE_TEXTURE
+			= new AssetDescriptor<Texture>("table_clear.jpg", Texture.class);
+	public static final AssetDescriptor<Texture> PAPER_TEXTURE
+			= new AssetDescriptor<Texture>("paper.jpg", Texture.class);
+	public static final AssetDescriptor<Texture> CIRCLE_TEXTURE
+			= new AssetDescriptor<Texture>("circle.png", Texture.class);
 
 	public static final AssetDescriptor<Texture> GAME_TEXTURE
 			= new AssetDescriptor<Texture>("Menü2.png", Texture.class);
@@ -95,6 +111,10 @@ public class Assets {
 		manager.load(BADLOGIC_TEXTURE);
 		manager.load(MAINAMENU_TEXTURE);
 
+		manager.load(TABLE_TEXTURE);
+		manager.load(PAPER_TEXTURE);
+		manager.load(CIRCLE_TEXTURE);
+
 		manager.load(GAME_TEXTURE);
 
 		manager.load(TEXTBOX_TEXTURE);
@@ -108,7 +128,8 @@ public class Assets {
 		manager.load(MUSIC);
 
 		manager.load(ALEGREYAREGULAR_FONT);
-		manager.load(NEUROPOL_FONT);
+		manager.load(CHALK_FONT);
+		manager.load(PENCIL_FONT);
 
 		/*
         manager.load(MUSIC);

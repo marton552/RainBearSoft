@@ -6,22 +6,22 @@ import com.badlogic.gdx.Gdx;
 /**
  * Created by tuskeb on 2016. 09. 30..
  */
-public class OtherScreen extends MyScreen {
-    protected OtherStage otherStage;
-    public OtherScreen(Game game) {
+public class PlayScreen extends MyScreen {
+    protected PlayStage playStage;
+    public PlayScreen(Game game) {
         super(game);
         r = 1;
         g = 0.5f;
         b = 0.3f;
-        otherStage = new OtherStage(viewport, spriteBatch, game);
-        Gdx.input.setInputProcessor(otherStage);
+        playStage = new PlayStage(viewport, spriteBatch, game);
+        Gdx.input.setInputProcessor(playStage);
     }
 
     @Override
     public void render(float delta) {
         super.render(delta);
-        otherStage.act(delta);
-        otherStage.draw();
+        playStage.act(delta);
+        playStage.draw();
 
     }
 }

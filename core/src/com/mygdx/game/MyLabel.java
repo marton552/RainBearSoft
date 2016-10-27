@@ -10,6 +10,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.g3d.particles.renderers.PointSpriteRenderer;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.math.Matrix4;
@@ -21,13 +22,12 @@ import com.badlogic.gdx.math.Matrix4;
 public class MyLabel extends Label {
     float elapsedtime =0;
     public static com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle style;
-    private ShapeRenderer sr;
     static
     {
         style = new com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle();
-        style.font = Assets.manager.get(Assets.ALEGREYAREGULAR_FONT);
+        style.font = Assets.manager.get(Assets.CHALK_FONT);
         style.fontColor = Color.WHITE;
-        Pixmap p = new Pixmap(1,1, Pixmap.Format.RGB888);
+        Pixmap p = new Pixmap(1,1, Pixmap.Format.RGBA8888);
         p.setColor(1f, 1f, 1f, 1f);
         p.fill();
 

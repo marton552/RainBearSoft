@@ -11,6 +11,8 @@ public class Globals {
     public static final String CHARS = "0123456789öüóqwertzuiopőúasdfghjkléáűíyxcvbnm'+!%/=()ÖÜÓQWERTZUIOPŐÚASDFGHJKLÉÁŰÍYXCVBNM?:_*<>#&@{}[],-.";
     //public static final BitmapFont FONT_HOBO_STD;
     //public static final BitmapFont CHALK_FONT;
+    public static boolean MAINMENU_CREATED = false;
+    public static int ROUNDS = 1;
 
     static {
         /*

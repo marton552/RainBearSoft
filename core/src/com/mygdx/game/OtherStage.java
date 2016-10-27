@@ -9,12 +9,12 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
-/**
- * Created by tuskeb on 2016. 09. 30..
- */
 public class OtherStage extends MyStage {
     private TextButton textButton;
-    public Music jatekmusic = Assets.manager.get(Assets.JATEK);
+    public Music jatek1 = Assets.manager.get(Assets.JATEK1);
+    public Music jatek2 = Assets.manager.get(Assets.JATEK2);
+    public Music jatek3 = Assets.manager.get(Assets.JATEK3);
+    int zene = 0
     public OtherStage(Game game) {
         super(game);
     }
@@ -30,8 +30,19 @@ public class OtherStage extends MyStage {
     @Override
     public void act() {
         super.act();
+        zene();
     }
-
+    
+    protected void zene() {
+        if zene == 0 {
+            zene = 1
+        } else if zene == 1 {
+            zene = 2;
+        } else if zene == 2 {
+            zene = 0;
+        }
+    }
+    
     protected void init() {
         addActor(new OneSpriteStaticActor(Assets.manager.get(Assets.GAME_TEXTURE)){
             @Override

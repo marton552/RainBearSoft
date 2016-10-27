@@ -33,13 +33,20 @@ public class OtherStage extends MyStage {
         zene();
     }
     
-    protected void zene() {
-        if zene == 0 {
-            zene = 1
-        } else if zene == 1 {
-            zene = 2;
-        } else if zene == 2 {
-            zene = 0;
+    public void zene() {
+        if zene == 0 && !(jatek1.isPlaying())  {
+            zene = 1;
+            jatek2.play();
+        } else {
+            if zene == 1 && !(jatek2.isPlaying())  {
+                 zene = 2;
+                 jatek3.play();
+            } else {
+                 if zene == 2 && !(jatek3.isPlaying()) {
+                      zene = 0;
+                      jatek1.play();
+                } 
+            }
         }
     }
     

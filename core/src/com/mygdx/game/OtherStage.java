@@ -14,7 +14,7 @@ public class OtherStage extends MyStage {
     public Music jatek1 = Assets.manager.get(Assets.JATEK1);
     public Music jatek2 = Assets.manager.get(Assets.JATEK2);
     public Music jatek3 = Assets.manager.get(Assets.JATEK3);
-    int zene = 0
+    int zene = 0;
     public OtherStage(Game game) {
         super(game);
     }
@@ -34,15 +34,15 @@ public class OtherStage extends MyStage {
     }
     
     public void zene() {
-        if zene == 0 && !(jatek1.isPlaying())  {
+        if (zene == 0 && !(jatek1.isPlaying()))  {
             zene = 1;
             jatek2.play();
         } else {
-            if zene == 1 && !(jatek2.isPlaying())  {
+            if (zene == 1 && !(jatek2.isPlaying()))  {
                  zene = 2;
                  jatek3.play();
             } else {
-                 if zene == 2 && !(jatek3.isPlaying()) {
+                 if (zene == 2 && !(jatek3.isPlaying())) {
                       zene = 0;
                       jatek1.play();
                 } 

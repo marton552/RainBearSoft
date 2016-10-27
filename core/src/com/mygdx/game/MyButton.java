@@ -11,7 +11,12 @@ import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
  */
 public class MyButton extends TextButton{
     static TextButton.TextButtonStyle textButtonStyle;
-    static
+    static{
+        refresh();
+    }
+
+
+    public static void refresh()
     {
         textButtonStyle = new TextButton.TextButtonStyle();
         textButtonStyle.font = Assets.manager.get(Assets.ALEGREYAREGULAR_FONT);

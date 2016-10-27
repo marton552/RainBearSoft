@@ -22,7 +22,12 @@ public class MyLabel extends Label {
     float elapsedtime =0;
     public static com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle style;
     private ShapeRenderer sr;
-    static
+    static{
+        refresh();
+    }
+
+
+    public static void refresh()
     {
         style = new com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle();
         style.font = Assets.manager.get(Assets.ALEGREYAREGULAR_FONT);

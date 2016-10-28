@@ -1,6 +1,7 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 
@@ -13,8 +14,12 @@ public class Globals {
     //public static final BitmapFont CHALK_FONT;
     public static boolean MAINMENU_CREATED = false;
     public static int ROUNDS = 1;
+    public static Music music = Assets.manager.get(Assets.MUSIC);
+    public static Music gamemusic = Assets.manager.get(Assets.JATEK);
 
     static {
+        music.stop();
+        gamemusic.stop();
         /*
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("alegreyaregular.otf"));
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
@@ -31,5 +36,19 @@ public class Globals {
         //CHALK_FONT = generator.generateFont(parameter);
         //CHALK_FONT.setColor(1, 1, 1, 1f);
         //generator.dispose();
+    }
+
+    public static void setMusic(int whichmusic){
+        if(whichmusic == 1){
+            gamemusic.stop();
+            gamemusic.setLooping(false);
+            music.setLooping(true);
+            music.play();
+        }else if(whichmusic == 2){
+            music.stop();
+            music.setLooping(false);
+            gamemusic.setLooping(true);
+            gamemusic.play();
+        }
     }
 }

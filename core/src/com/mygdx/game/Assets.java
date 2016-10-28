@@ -80,18 +80,12 @@ public class Assets {
 			= new AssetDescriptor<TextureAtlas>("mosoly.atlas", TextureAtlas.class);
 	public static final AssetDescriptor<TextureAtlas> LOADING_TEXTUREATLAS
 			= new AssetDescriptor<TextureAtlas>("loading.atlas", TextureAtlas.class);
-	public static final AssetDescriptor<TextureAtlas> ELTALALTAD_TEXTUREATLAS
-			= new AssetDescriptor<TextureAtlas>("eltalaltad.atlas", TextureAtlas.class);
 
 
     public static final AssetDescriptor<Music> MUSIC
             = new AssetDescriptor<Music>("menu.wav", Music.class);
-	public static final AssetDescriptor<Music> JATEK1
-            = new AssetDescriptor<Music>("jatek1.wav", Music.class);
-	public static final AssetDescriptor<Music> JATEK2
-            = new AssetDescriptor<Music>("jatek2.wav", Music.class);
-	public static final AssetDescriptor<Music> JATEK3
-            = new AssetDescriptor<Music>("jatek3.wav", Music.class);
+	public static final AssetDescriptor<Music> JATEK
+            = new AssetDescriptor<Music>("jatek.mp3", Music.class);
 	
 /*
     public static final AssetDescriptor<Sound> STAR_SOUND
@@ -127,9 +121,9 @@ public class Assets {
 		manager.load(EXPLOSION_TEXTUREATLAS);
 		manager.load(STAR_TEXTUREATLAS);
 		manager.load(LOADING_TEXTUREATLAS);
-		manager.load(ELTALALTAD_TEXTUREATLAS);
 
 		manager.load(MUSIC);
+		manager.load(JATEK);
 
 		manager.load(ALEGREYAREGULAR_FONT);
 		manager.load(CHALK_FONT);

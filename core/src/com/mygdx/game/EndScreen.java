@@ -32,11 +32,12 @@ public class EndScreen extends MyScreen {
 
             private MyLabel cim;
             private TextBoxLabel alcim;
+            private int round;
 
 
             protected void init() {
                 setBackGroundColor(0f,0.2f,0.4f);
-
+                round = Globals.ROUNDS - 1;
                 addActor(new OneSpriteStaticActor(Assets.manager.get(Assets.TABLE_TEXTURE)){
                     @Override
                     protected void init() {
@@ -49,8 +50,8 @@ public class EndScreen extends MyScreen {
                 cim.setPosition(getViewport().getScreenWidth() / 2 - cim.getWidth() / 2, getViewport().getWorldHeight() - cim.getHeight() - 30);
                 addActor(cim);
 
-                alcim = new TextBoxLabel("Összesen " + Globals.ROUNDS + " feleadatot\n sikerült megoldanod.");
-                alcim.setPosition(getViewport().getScreenWidth() / 2 - alcim.getWidth() / 2, cim.getY() - cim.getHeight() - 50);
+                alcim = new TextBoxLabel("Összesen " + round + " feleadatot\n sikerült megoldanod.");
+                alcim.setPosition(getViewport().getWorldWidth() / 2 - alcim.getWidth() / 2, cim.getY() - cim.getHeight() - 50);
 
                 addActor(alcim);
 

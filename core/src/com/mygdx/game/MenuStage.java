@@ -11,7 +11,6 @@ import com.badlogic.gdx.utils.viewport.Viewport;
  * Created by tuskeb on 2016. 09. 30..
  */
 public class MenuStage extends MyStage {
-    public Music music = Assets.manager.get(Assets.MUSIC);
     private MyLabel cim;
     private MyButton playButton;
     private MyButton aboutButton;
@@ -63,9 +62,7 @@ public class MenuStage extends MyStage {
                 super.clicked(event, x, y);
                 game.setScreen(new PlayScreen(game));
                 Globals.ROUNDS = 1;
-                for (float i = music.getVolume(); music.getVolume() > 0; i = i - 0.01f){
-                    music.setVolume(i);
-                }
+                Globals.setMusic(2);
             }
         });
 
@@ -88,11 +85,6 @@ public class MenuStage extends MyStage {
     @Override
     public void act(float delta) {
         super.act(delta);
-        if (!music.isPlaying())
-        {
-            music.play();
-
-        }
 
         if(Globals.MAINMENU_CREATED == false){
 

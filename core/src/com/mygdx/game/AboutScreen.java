@@ -51,7 +51,7 @@ public class AboutScreen extends MyScreen {
 
                 alcim = new TextBoxLabel("A játék egy iskolásról, Petiről szól,\n aki éppen a Matematikai pótvizsgáját írja.\n" +
                         "Segíts Petinek bekarikázni\na lehető legtöbb helyes megoldást\nés legyél te a pótvizsgák királya.\n\nRainBear - 2016");
-                alcim.setPosition(getViewport().getScreenWidth() / 2 - alcim.getWidth() / 2, 50);
+                alcim.setPosition(getViewport().getWorldWidth() / 2 - alcim.getWidth() / 2, 50);
 
                 alcim.setFontScale(0.7f);
 

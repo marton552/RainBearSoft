@@ -107,7 +107,7 @@ public class PlayStage extends MyStage {
         addActor(circle1);
         addActor(circle2);
         addActor(circle3);
-
+        timedown = 60;
         timerl = new TimerLabel(""+timedown);
         timerl.setPosition(20, getViewport().getWorldHeight() - timerl.getHeight() - 10);
         timerl.setFontScale(1);
@@ -124,6 +124,7 @@ public class PlayStage extends MyStage {
                     animate = 1;
                 }else{
                     game.setScreen(new EndScreen(game));
+                    Globals.setMusic(1);
                 }
 
 
@@ -141,6 +142,7 @@ public class PlayStage extends MyStage {
                     animate = 1;
                 }else{
                     game.setScreen(new EndScreen(game));
+                    Globals.setMusic(1);
                 }
 
 
@@ -158,6 +160,7 @@ public class PlayStage extends MyStage {
                     animate = 1;
                 }else{
                     game.setScreen(new EndScreen(game));
+                    Globals.setMusic(1);
                 }
 
 
@@ -204,6 +207,12 @@ public class PlayStage extends MyStage {
                 timedown--;
                 System.out.println(timedown);
                 timerl.setText(""+timedown);
+
+                if(timedown == 0){
+                    game.setScreen(new EndScreen(game));
+                    timerRunning = false;
+                    Globals.setMusic(1);
+                }
             }
             tick = 0;
         }
